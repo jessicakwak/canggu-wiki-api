@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -23,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/jessicakwak/canggu-wiki-api/issues"
   },
-  "homepage": "https://github.com/jessicakwak/canggu-wiki-api#readme"
+  "homepage": "https://github.com/jessicakwak/canggu-wiki-api#readme",
+  "description": ""
 }
