@@ -23,6 +23,13 @@ router.get("/", (req, res) => {
     });
 });
 
+router.get("/:id", (req, res) => {
+  Restaurants.findById(req.params.id)
+    .populate("type features")
+    .then(doc => res.send(doc))
+    .catch(err => console.log(err));
+});
+
 //Update
 router.patch("/:id", (req, res) => {
   Restaurants.findByIdAndUpdate(req.params.id, req.body)
