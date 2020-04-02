@@ -17,3 +17,5 @@ app.use("/restaurants", require("./controllers/restaurants"));
 app.listen(process.env.PORT, err => {
   err ? console.log(err) : console.log(`Server running on ${process.env.PORT}`);
 });
+
+module.exports = app;
