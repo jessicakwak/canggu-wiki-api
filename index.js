@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use("/types", require("./controllers/types"));
 app.use("/features", require("./controllers/features"));
 app.use("/restaurants", require("./controllers/restaurants"));
+app.use("/cities", require("./controllers/cities"));
 
 app.listen(process.env.PORT, err => {
   err ? console.log(err) : console.log(`Server running on ${process.env.PORT}`);
