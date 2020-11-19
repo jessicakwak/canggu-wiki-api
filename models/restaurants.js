@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 mongoose.set("useFindAndModify", false);
 require("./types");
 require("./features");
+require("./cities");
 
 const ObjectID = mongoose.Schema.Types.ObjectId;
 
@@ -22,7 +23,8 @@ module.exports = mongoose.model("restaurants", {
     }
   ],
   city: {
-    type: String
+    type: ObjectID,
+    ref: "cities"
   },
   region: {
     type: String
