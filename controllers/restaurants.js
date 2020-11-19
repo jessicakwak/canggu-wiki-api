@@ -17,7 +17,7 @@ router.post("/", (req, res) => {
 //Read
 router.get("/", (req, res) => {
   Restaurants.find()
-    .populate("type features")
+    .populate("type features cities")
     .then(data => {
       res.send(data);
     });
@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   Restaurants.findById(req.params.id)
-    .populate("type features")
+    .populate("type features cities")
     .then(doc => res.send(doc))
     .catch(err => console.log(err));
 });
